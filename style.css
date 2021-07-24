@@ -1,0 +1,88 @@
+:root {
+  --main-bg-color: rgb(2, 0, 36);
+  --gradient: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 87, 121, 0.41220238095238093) 31%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  --heading-size: 2em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header a img {
+  height: 90px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 40px 100px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+section {
+  padding: 100px;
+}
+
+.banner {
+  position: absolute;
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h2 {
+  font-size: var(--heading-size);
+  color: dodgerblue;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+.banner h2 span {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.banner h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  background: dodgerblue;
+  padding: 10px 30px;
+  border-radius: 4px;
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
