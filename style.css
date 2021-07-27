@@ -1,12 +1,6 @@
 :root {
-  --main-bg-color: rgb(2, 0, 36);
-  --gradient: linear-gradient(
-    0deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 87, 121, 0.41220238095238093) 31%,
-    rgba(0, 212, 255, 1) 100%
-  );
   --heading-size: 2em;
+  --main-color: #e66133;
 }
 
 * {
@@ -16,25 +10,35 @@
   font-family: "Poppins", sans-serif;
 }
 
+/*----------------
+TOP/HEADER
+------------------*/
 header a img {
-  height: 90px;
+  height: 80px;
+  margin-top: 5px;
 }
-
+header a img:hover {
+  transform: scale(1.05);
+  transition: 0.1s ease;
+}
 header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 40px 100px;
+  padding: 0px 100px;
   width: 100%;
-  z-index: 1000;
+  z-index: 99999;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 0.6em 0.6em -0.4em;
+  background-color: white;
 }
 
 header ul {
   position: relative;
   display: flex;
+  z-index: 1000;
 }
 
 header ul li {
@@ -42,47 +46,190 @@ header ul li {
   list-style: none;
 }
 
+header ul li a {
+  position: relative;
+  display: inline-block;
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+header ul li a:hover {
+  color: var(--main-color);
+  transition: all 0.1s ease-in;
+  transform: scale(1.05);
+}
+
 section {
   padding: 100px;
 }
 
 .banner {
-  position: absolute;
-  height: 100vh;
-
+  position: relative;
+  min-height: 100vh;
   display: flex;
-
-  justify-content: center;
+  width: 100vw;
+  justify-content: left;
   align-items: center;
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 2%,
+    rgba(0, 48, 57, 0) 20%,
+    rgba(0, 200, 237, 0) 44%,
+    rgba(0, 215, 255, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 2%,
+    rgba(0, 48, 57, 0) 20%,
+    rgba(0, 200, 237, 0) 44%,
+    rgba(0, 215, 255, 0) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 2%,
+    rgba(0, 48, 57, 0) 20%,
+    rgba(0, 200, 237, 0) 44%,
+    rgba(0, 215, 255, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#00d7ff",GradientType=1);
 }
 
 .banner h2 {
-  font-size: var(--heading-size);
-  color: dodgerblue;
+  font-size: 2em;
+  color: var(--main-color);
   font-weight: 500;
-  line-height: 1.5em;
+  line-height: 2em;
 }
 
 .banner h2 span {
-  font-size: 1em;
+  font-family: "Rokkitt", sans-serif;
+  font-size: 2.5em;
   font-weight: 700;
+  letter-spacing: 8px;
 }
 
 .banner h3 {
-  font-size: 1.5em;
-  font-weight: 500;
+  font-family: "Rokkitt", sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
 }
 
 .btn {
   position: relative;
   display: inline-block;
-  background: dodgerblue;
+  border: 2px solid var(--main-color);
   padding: 10px 30px;
   border-radius: 4px;
   margin-top: 20px;
-  color: white;
+  color: var(--main-color);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 500;
+  font-weight: 600;
+}
+.btn:hover {
+  border-color: var(--main-color);
+  box-shadow: 0 0.6em 0.6em -0.4em;
+  transition: 0.1s ease;
+  transform: translateY(-0.25em);
+}
+
+/*----------------
+ANIMATIONS
+------------------*/
+
+/* Frontend Developer subheading */
+.line {
+  position: relative;
+  top: 50%;
+  left: 0;
+  width: 3em;
+  margin-top: 30px;
+  margin-left: 0;
+  border-right: 2px solid black;
+  font-size: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+.anim-typewriter {
+  animation: typewriter 2s steps(40) 1 normal both,
+    blinkTextCursor 900ms steps(40) 3s infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 8.5em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+h3 {
+  animation-name: textIn;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+@keyframes textIn {
+  0% {
+    transform: translate(200px);
+  }
+}
+h2 {
+  animation-name: nameIn;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-play-state: paused 2s;
+}
+
+/* Name scroll down */
+@keyframes nameIn {
+  0% {
+    color: transparent;
+    transform: translateY(-70px);
+  }
+  50% {
+    color: #e78564;
+  }
+  100% {
+    color: var(--main-color);
+  }
+}
+
+/* Button scroll up */
+.btn {
+  animation-name: btnIn;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+
+@keyframes btnIn {
+  0% {
+    overflow: hidden;
+    border-color: transparent;
+    color: transparent;
+    transform: translateY(70px);
+  }
+  50% {
+    border-color: #e78564;
+  }
+  100% {
+    color: var(--main-color);
+  }
 }
