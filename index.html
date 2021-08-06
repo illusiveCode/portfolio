@@ -11,26 +11,138 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&family=Rokkitt&family=Staatliches&family=Zen+Tokyo+Zoo&display=swap"
       rel="stylesheet"
     />
-    <title>Muhammad Raza|Frontend Developer</title>
+    <link rel="shortcut icon" href="/images/mr-logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Muhammad Raza | Frontend Developer</title>
   </head>
   <body>
     <header>
-      <a href="#" class="logo"><img src="/images/mr-logo.png" alt="" /></a>
+      <a href="#" class="logo"
+        ><img src="/images/mr-logo.png" alt="Logo" title="Home"
+      /></a>
       <div class="toggle"></div>
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Skills</a></li>
-        <li><a href="">Portfolio</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#skills-section">Skills</a></li>
+        <li><a href="#portfolio-section">Portfolio</a></li>
+        <li><a href="#contact-section">Contact</a></li>
       </ul>
     </header>
 
-    <section class="banner">
+    <section id="top" class="banner">
       <div class="textBx">
-        <h2>Hello, I'm <br /><span>Muhammad Raza.</span></h2>
+        <h2 class="name">Hello, I'm <br /><span>Muhammad Raza.</span></h2>
         <h3 class="line anim-typewriter">Frontend Developer</h3>
-        <a href="#" class="btn">About Me</a>
+        <a href="#about" class="btn">About Me</a>
+      </div>
+      <div class="socials">
+        <a
+          href="https://www.linkedin.com/in/frontend-developer-muhammad-raza/"
+          target="blank"
+          title="LinkedIn"
+          class="social-link"
+          ><i
+            class="s-logo fab fa-linkedin-in fa-3x"
+            alt="Icon for linkedIn"
+          ></i
+        ></a>
+        <a
+          href="https://twitter.com/illusiveCode"
+          target="blank"
+          title="Twitter"
+          class="social-link"
+          ><i
+            class="s-logo fab fa-twitter fa-lg fa-3x"
+            alt="Icon for Twitter"
+          ></i
+        ></a>
+        <a
+          href="https://github.com/illusiveCode"
+          target="blank"
+          title="Github"
+          class="social-link"
+          ><i
+            id="git-social"
+            class="s-logo fab fa-github fa-lg fa-3x"
+            alt="Icon for Github"
+          ></i
+        ></a>
+      </div>
+    </section>
+    <section id="about-section" class="about">
+      <div class="heading">
+        <h2>About Me</h2>
+        <hr />
+      </div>
+      <div class="content">
+        <div class="contentBx w50">
+          <p>
+            Recently graduated as a frontend developer via OpenClassrooms with a
+            wide range of skills and good proficiency in HTML, CSS, JavaScript;
+            experience with react, git and terminal. I am design-oriented and
+            love creating websites/apps that captivate the user with good UI/UX.
+          </p>
+        </div>
+        <div class="w50">
+          <img
+            src="/images/hello-world.png"
+            alt="Code Snippet that displays 'alert('Hello World!');"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="skills-section" class="skills">
+      <div class="heading">
+        <h2>Skills</h2>
+        <hr />
+      </div>
+      <div class="content">
+        <div class="skillsBx">
+          <i class="fab fa-npm fa-6x"></i>
+          <h2>Node Package Manager</h2>
+        </div>
+        <div class="skillsBx">
+          <i class="fab fa-html5 fa-6x"></i>
+          <h2>HTML</h2>
+        </div>
+        <div class="skillsBx">
+          <i class="fab fa-css3 fa-6x"></i>
+          <h2>CSS</h2>
+        </div>
+        <div class="skillsBx">
+          <i class="fab fa-js fa-6x"></i>
+          <h2>JavaScript</h2>
+        </div>
+        <div class="skillsBx">
+          <i class="fab fa-react fa-6x"></i>
+          <h2>React</h2>
+        </div>
+        <div class="skillsBx">
+          <i class="fab fa-yarn fa-6x"></i>
+          <h2>Yarn</h2>
+        </div>
+        <div class="skillsBx">
+          <i class="fas fa-pencil-ruler fa-6x"></i>
+          <h2>Chrome Dev Tools</h2>
+        </div>
+        <div class="skillsBx">
+          <i class="fab fa-wordpress fa-6x"></i>
+          <h2>WordPress</h2>
+        </div>
+        <div class="skillsBx">
+          <i class="fab fa-github fa-6x"></i>
+          <h2>Github</h2>
+        </div>
+        <div class="skillsBx">
+          <i class="fab fa-git fa-6x"></i>
+          <h2>Version Control</h2>
+        </div>
       </div>
     </section>
 
