@@ -8,6 +8,10 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 /*---------------- TOP/HEADER ------------------*/
 header a img {
   height: 80px;
@@ -27,8 +31,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: white;
-  */
   transition: 0.5s;
 }
 header.sticky {
@@ -50,7 +52,6 @@ header ul li a {
   display: inline-block;
   margin: 0 15px;
   font-size: 130%;
-
   font-weight: 600;
   text-decoration: none;
   color: black;
@@ -142,6 +143,15 @@ section {
   transition: 0.1s ease;
   transform: translateY(-0.25em);
 }
+.arrow i {
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+}
+/*---------------- ABOUT SECTION ------------------*/
 .heading {
   width: 100%;
   text-align: center;
@@ -205,10 +215,7 @@ section {
   transform: translateY(-0.1em);
 }
 /*---------------- SKILLS SECTION ------------------*/
-
 .skills {
-  width: 100vw;
-  height: 100vh;
   background: rgb(230, 97, 51);
   background: -moz-linear-gradient(
     180deg,
@@ -230,7 +237,6 @@ section {
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e66133",endColorstr="#00c8ed",GradientType=1);
 }
-
 .content {
   margin-top: 100px;
 }
@@ -255,8 +261,8 @@ i.fa-npm {
   color: #c53635;
   filter: drop-shadow(0 0 0.75rem white);
 }
-i.fa-yarn {
-  color: #2b8ab5;
+i.fa-bootstrap {
+  color: #7d10f2;
   filter: drop-shadow(0 0 0.75rem white);
 }
 i.fa-pencil-ruler {
@@ -303,6 +309,66 @@ i.fa-js {
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+}
+/*---------------- PORTFOLIO SECTION ------------------*/
+.services .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.services .content .servicesBx {
+  border-radius: 4px;
+  padding: 40px 20px;
+  background: rgb(230, 97, 51);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(230, 97, 51, 1) 0%,
+    rgba(254, 115, 32, 0.6054796918767507) 8%,
+    rgba(0, 200, 237, 0) 53%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(230, 97, 51, 1) 0%,
+    rgba(254, 115, 32, 0.6054796918767507) 8%,
+    rgba(0, 200, 237, 0) 53%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(230, 97, 51, 1) 0%,
+    rgba(254, 115, 32, 0.6054796918767507) 8%,
+    rgba(0, 200, 237, 0) 53%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e66133",endColorstr="#00c8ed",GradientType=1);
+  color: black;
+  max-width: 600px;
+  margin: 20px 120px;
+  text-align: center;
+  transition: 0.5s;
+}
+.services .content .servicesBx img {
+  width: 500px;
+  margin: 0;
+  background-position: center;
+}
+.btn2 {
+  position: relative;
+  display: inline-block;
+  background-color: black;
+  border: 4px solid black;
+  padding: 10px 30px;
+  border-radius: 4px;
+  margin: 20px 20px;
+  color: white;
+  width: 120px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.btn2:hover {
+  border-color: transparent;
+  transition: 0.1s ease;
+  transform: scale(1.1);
 }
 /*---------------- ANIMATIONS ------------------*/
 /* Frontend Developer subheading */
@@ -387,5 +453,31 @@ i.fa-js {
   }
   100% {
     color: black;
+  }
+}
+.arrow i {
+  animation: arrowDown 1.5s infinite;
+  animation-delay: 5s;
+}
+@keyframes arrowDown {
+  10% {
+    height: 50px;
+    width: 50px;
+  }
+  30% {
+    height: 50px;
+    width: 40px;
+  }
+  50% {
+    height: 30px;
+    width: 57px;
+    transform: translateY(25px);
+  }
+  75% {
+    height: 50px;
+    width: 57px;
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
